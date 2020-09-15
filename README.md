@@ -7,7 +7,7 @@
 <br>
 
 ## MVP
-A responsive website users can login to make flashcards, or study someone else's set.  Users can also add-to an exisiting set . Ask questions/answer community questions about specific each flash card. They will be able to manage their profile.
+A responsive website users can login to make full CRUD flashcards, or study someone else's set.  Users can also add-to an exisiting set . Ask questions/answer community questions about specific a flash card. They will also be able to manage their profile.
 
 
 
@@ -20,8 +20,9 @@ A responsive website users can login to make flashcards, or study someone else's
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
 |   React Router   | Front-end Routing                          |
-|     Ruby on Rails         | Back-end                                   |
+|     Ruby on Rails         | Back-end                          |
 |    Express       | Web app framework                          |
+|    Axios         |   HTTP request                             |
 
 <br>
 
@@ -66,7 +67,6 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component     |    Type    | state | props | Description                                                      |
 | :----------:   | :--------: | :---: | :---: | :--------------------------------------------------------------- |
