@@ -38,7 +38,7 @@ A responsive website users can login to make flashcards, or study someone else's
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+[ComponentTree]https://github.com/forexsnyder/Flashcards/blob/develop/ParentChild.JPG
 
 #### Component Hierarchy
 
