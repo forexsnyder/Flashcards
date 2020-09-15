@@ -101,7 +101,7 @@ src
 
 #### ERD Model
 
-[ERB Model](https://app.diagrams.net/#G10o1sAj9puS-KupTZqOCnMzmNmlhwHoq7)
+[ERB Model](https://drive.google.com/file/d/10o1sAj9puS-KupTZqOCnMzmNmlhwHoq7/view?usp=sharing)
 
 <br>
 
