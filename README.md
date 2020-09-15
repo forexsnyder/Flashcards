@@ -20,7 +20,7 @@ A responsive website users can login to make flashcards, or study someone else's
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
 |   React Router   | Front-end Routing                          |
-|     Ruby         | Back-end                                   |
+|     Ruby on Rails         | Back-end                                   |
 |    Express       | Web app framework                          |
 
 <br>
