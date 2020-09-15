@@ -7,7 +7,7 @@
 <br>
 
 ## MVP
-A website users can login to make flashcards, or study someone else's set.  Users can also expand an exisiting set. Ask questions/answer community questions about specific each flash card. 
+A responsive website users can login to make flashcards, or study someone else's set.  Users can also add-to an exisiting set . Ask questions/answer community questions about specific each flash card. They will be able to manage their profile.
 
 
 
@@ -21,9 +21,9 @@ A website users can login to make flashcards, or study someone else's set.  User
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
-|   React Router   | Front-end Routing                                          |
+|   React Router   | Front-end Routing                          |
 |     Express      |                                            |
-|  Express Router  |  |
+|  Express Router  |                                            |
 
 <br>
 
@@ -31,31 +31,12 @@ A website users can login to make flashcards, or study someone else's set.  User
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+[Desktop Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-- Desktop Landing
+[Tablet Wireframe](https://app.diagrams.net/#G1jVAoFevRgf8DjRyKSTyjQldwCHBCfFCZ)
 
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+[Mobile Wireframe](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
 
 #### Component Tree
 
@@ -83,13 +64,13 @@ src
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|  Component     |    Type    | state | props | Description                                                      |
+| :----------:   | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header      | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+| Flashcard Set  | functional |   n   |   n   |   Searchable list of Flashcard Topics  |
+|        |   class    |   y   |   n   | _      |
+| Edit Profile   | functional |   n   |   y   |                  |
+|    Footer      | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Time Estimates
 
