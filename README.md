@@ -16,8 +16,6 @@ A responsive website users can login to make flashcards, or study someone else's
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
@@ -50,13 +48,19 @@ A responsive website users can login to make flashcards, or study someone else's
 
 src
 |__ assets/
-      |__ fonts
       |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Welcome.jsx
+      |__ Flashcard.jsx
+      |__ Signup.jsx
+      |__ LandingPage.jsx
+      |__ MemoryGame.jsx
 |__ services/
+      |__ Comments.jsx
+      |__ Sort.jsx
+      |__ Comments.jsx
+      |__ RecentComments.jsx
 
 ```
 
@@ -76,13 +80,19 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------    | :------: | :------------: | :-----------: | :---------: |
+| Welcome  Page          |    H     |     3 hrs      |               |     TBD     |
+| Create CRUD Flashcards |    H     |     3 hrs      |               |     TBD     |
+| Signup              |    H     |     2 hrs      |               |     TBD     |
+| LandingPage         |    H     |     5 hrs      |               |     TBD     |
+| Backend             |    H     |     3 hrs      |               |     TBD     |
+| Flashcards          |    H     |     6 hrs      |               |     TBD     |
+| Edit Profile        |    H     |     3 hrs      |               |     TBD     |
+| Comments Section    |    H     |     3 hrs      |               |     TBD     |
+| Styling             |    H     |     20 hrs     |               |     TBD     |
+| TOTAL               |          |     48 hrs     |               |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -98,7 +108,8 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Memory Game with a highscore.  Using the linked list system a player chooses how many objects they want to memorize.  Then write down the items in order.  Score the list,
+and the player will see their high score.
 
 ***
 
