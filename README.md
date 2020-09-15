@@ -100,7 +100,7 @@ src
 
 #### ERD Model
 
-![ERB] (https://app.diagrams.net/#G10o1sAj9puS-KupTZqOCnMzmNmlhwHoq7)
+![ERB Model](https://app.diagrams.net/#G10o1sAj9puS-KupTZqOCnMzmNmlhwHoq7)
 
 <br>
 
