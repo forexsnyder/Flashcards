@@ -49,7 +49,7 @@ A responsive website users can login to make flashcards, or study someone else's
 src
 |__ assets/
       |__ graphics
-|__ components/
+|__ screens/
       |__ Header.jsx
       |__ Welcome.jsx
       |__ Flashcard.jsx
