@@ -30,11 +30,11 @@ A responsive website users can login to make flashcards, or study someone else's
 #### Wireframes
 
 
-[Desktop Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
+[Desktop](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-[Tablet Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
+[Tablet](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-[Mobile Wireframes](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
+[Mobile](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
 
 #### Component Tree
 
