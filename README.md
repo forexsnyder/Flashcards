@@ -32,7 +32,7 @@ A responsive website users can login to make flashcards, or study someone else's
 
 [Desktop Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-[Tablet Wireframe](https://app.diagrams.net/#G1jVAoFevRgf8DjRyKSTyjQldwCHBCfFCZ)
+[Tablet Wireframe](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
 [Mobile Wireframe](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
 
