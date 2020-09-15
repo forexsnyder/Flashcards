@@ -20,8 +20,8 @@ A responsive website users can login to make flashcards, or study someone else's
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
 |   React Router   | Front-end Routing                          |
-|     Express      |                                            |
-|  Express Router  |                                            |
+|     Ruby         | Back-end                                   |
+|    Express       | Web app framework                          |
 
 <br>
 
@@ -70,11 +70,12 @@ src
 
 |  Component     |    Type    | state | props | Description                                                      |
 | :----------:   | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header      | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-| Flashcard Set  | functional |   n   |   n   |   Searchable list of Flashcard Topics  |
-|        |   class    |   y   |   n   | _      |
-| Edit Profile   | functional |   n   |   y   |                  |
-|    Footer      | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Header      | functional |   n   |   n   | Title and Navigation                                             |
+|    Signup      | functional |   n   |   n   | Change form state                                             |
+|    Landingpage      | functional |   n   |   n   | Title and Navigation                                             |
+| Flashcard Set  | functional |   n   |   n   | Searchable list of Flashcard Topics, Create New Set                              |
+| Flashcard      | functional |   n   |   n   | Create, Read, Update, Delete Flashcard                           |
+| Edit Profile   | functional |   n   |   y   | Change email, password, username                                 |
 
 #### Time Estimates
 
