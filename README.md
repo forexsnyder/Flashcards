@@ -32,9 +32,9 @@ A responsive website users can login to make flashcards, or study someone else's
 
 [Desktop Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-[Tablet Wireframe](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
+[Tablet Wireframes](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
 
-[Mobile Wireframe](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
+[Mobile Wireframes](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
 
 #### Component Tree
 
@@ -72,9 +72,9 @@ src
 | :----------:   | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header      | functional |   n   |   n   | Title and Navigation                                             |
 |    Signup      | functional |   n   |   n   | Change form state                                             |
-|    Landingpage      | functional |   n   |   n   | Title and Navigation                                             |
-| Flashcard Set  | functional |   n   |   n   | Searchable list of Flashcard Topics, Create New Set                              |
-| Flashcard      | functional |   n   |   n   | Create, Read, Update, Delete Flashcard                           |
+|    Landingpage      | functional |   n   |   y   | Title and Navigation                                             |
+| Flashcard Set  | functional |   n   |   y   | Searchable list of Flashcard Topics, Create New Set                              |
+| Flashcard      | functional |   n   |   y   | Create, Read, Update, Delete Flashcard                           |
 | Edit Profile   | functional |   n   |   y   | Change email, password, username                                 |
 
 #### Time Estimates
