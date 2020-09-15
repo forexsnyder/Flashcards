@@ -38,7 +38,7 @@ A responsive website users can login to make flashcards, or study someone else's
 
 #### Component Tree
 
-[ComponentTree](https://github.com/forexsnyder/Flashcards/blob/develop/ParentChild.JPG)
+![ComponentTree](https://github.com/forexsnyder/Flashcards/blob/develop/ParentChild.JPG)
 
 #### Component Hierarchy
 
