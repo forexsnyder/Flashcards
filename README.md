@@ -31,9 +31,9 @@ A responsive website users can login to make full CRUD flashcards, or study some
 #### Wireframes
 
 
-[Desktop](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
+[Desktop](https://drive.google.com/file/d/1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7/view?usp=sharing)
 
-[Tablet](https://app.diagrams.net/#G1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7)
+[Tablet](https://drive.google.com/file/d/1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7/view?usp=sharing7)
 
 [Mobile](https://app.diagrams.net/#G1V1owPx8bv7luYMoA78fyqkS8kLcq60id)
 
