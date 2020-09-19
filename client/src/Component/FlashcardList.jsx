@@ -1,5 +1,5 @@
 import React from 'react'
-import Flashcard from '../screens/Flashcard';
+import Flashcard from '../Screens/Flashcard';
 
 export default function FlashcardList({ flashcards }) {
   return (
