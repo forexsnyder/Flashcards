@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+aws = Topic.create!(name: "AWS Solutions Associate")
+cissp = Topic.create!(name: "CISSP")
+security = Topic.create!(name: "Security+")
+
+flashcard1 = Flashcard.create!(front: "What is AWS", back: "A place to earn money.", topic_id: 1)
+
+comment = Comment.create!(comment: "Why is Jeff Bezos so rich", flashcard_id: 1)

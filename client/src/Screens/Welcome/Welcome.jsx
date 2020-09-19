@@ -1,21 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import FlashcardList from './Component/FlashcardList';
-import './App.css'
-import axios from 'axios'
+import './Welcome.css'
 
-function App() {
+function Welcome() {
 
   
   return (
-    <>
-      
-      
-        <div className="form-group">
+      <div>
+          <h1>Welcome to the welcome page</h1>
       
       
       </div>
-    </>
+   
   );
 }
 
-export default App;
+export default Welcome;
