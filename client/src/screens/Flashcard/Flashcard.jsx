@@ -1,3 +1,4 @@
+//modified from https://www.youtube.com/watch?v=hEtZ040fsD8
 import React, { useState, useEffect, useRef } from 'react'
 
 export default function Flashcard({ flashcard }) {
