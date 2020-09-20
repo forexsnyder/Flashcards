@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css'
 import api from './Services/Api-config'
+import CUDFlashcards from "./Screens/CUDFlashcards/CUDFlashcards"
+import Welcome from "./screens/Welcome/Welcome"
+
 
 function App() {
 
