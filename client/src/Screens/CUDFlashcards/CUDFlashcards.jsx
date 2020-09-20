@@ -1,18 +1,19 @@
 import React from 'react';
-import './Layout.css'
+import './CUDFlashcards.css'
+import Layout from "../../Component/Shared/Layout"
 
 
-function Layout() {
+function CUDFlashcards() {
 
   
   return (
-
+      <Layout>
         <div>
-      
+      <he1>get ready to CUD flashcards</he1>
       
       </div>
-  
+      </Layout>
   );
 }
 
-export default Layout;
+export default CUDFlashcards;
