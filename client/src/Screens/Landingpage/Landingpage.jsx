@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import FlashcardList from '../../Component/FlashcardList';
 // import './App.css'
 import axios from 'axios'
+import Layout from "../../Component/Shared/Layout"
 
 function Landingpage() {
   const [flashcards, setFlashcards] = useState([])

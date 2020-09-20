@@ -1,6 +1,6 @@
 //modified from https://www.youtube.com/watch?v=hEtZ040fsD8
 import React, { useState, useEffect, useRef } from 'react'
-
+import Layout from "../../Component/Shared/Layout"
 export default function Flashcard({ flashcard }) {
   const [flip, setFlip] = useState(false)
   const [height, setHeight] = useState('initial')

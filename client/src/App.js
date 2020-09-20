@@ -18,9 +18,7 @@ function App() {
       const data = await api.get('/topics')
       console.log(data.data)
       updateSubject(data)
-    
     }
-
     topics()
 
 
@@ -32,11 +30,7 @@ function App() {
         <Route exact path="/landingpage" component={Landingpage} />
         <Route exact path="/flashcard" component={Flashcard} />
         <Route exact path="/cudflashcards" component={CUDFlashcards} />
-
-
-
         </Switch>
-  
       </div>
   );
 }
