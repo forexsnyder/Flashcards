@@ -3,6 +3,7 @@ import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
 
 
+
 function CUDTopics() {
 
 
@@ -15,6 +16,18 @@ function CUDTopics() {
         <a>Create a new Topic.</a>
         <input></input>
       </div>
+     <div>
+       <a>Update a topic</a>
+       <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+          <input type="submit"></input>
+     </div>
+      
       {/* <form className="edit-form" onSubmit={handleSubmit}>
                     <input
                         className="input-name"
