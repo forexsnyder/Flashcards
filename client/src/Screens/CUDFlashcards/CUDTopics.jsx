@@ -15,6 +15,10 @@ function CUDTopics() {
       <div>
         <a>Create a new Topic.</a>
         <input></input>
+        <input type="submit"></input>
+      </div>
+      <div>
+        <h1>Or....</h1>
       </div>
      <div>
        <a>Update a topic</a>

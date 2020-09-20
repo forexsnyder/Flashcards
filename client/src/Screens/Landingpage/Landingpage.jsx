@@ -7,6 +7,7 @@ import api from "../../Services/Api-config"
 import Topic from "../../Component/Topic/Topic"
 
 
+
 function Landingpage(){
   const [topics,updateTopics] = useState([])
   const params = useParams();
@@ -35,12 +36,17 @@ function Landingpage(){
 
 
   return (
+    <Layout>
     <div>
       <div className="topics">
       {topicsJSX}
       </div>
 
     </div>
+
+
+    </Layout>
+
 
     
   );

@@ -3,7 +3,7 @@ import Layout from "../../Component/Shared/Layout"
 import './Welcome.css'
 import api from '../../Services/Api-config'
 import cards from '../../Resources/flashcards.jpg'
-
+import { Link } from 'react-router-dom'
 function Welcome() {
   // flashcard picture ref https://www.youtube.com/watch?v=xVcdlANWsl0
   
@@ -16,6 +16,10 @@ function Welcome() {
             <img src={cards} alt="flashcards" alt="https://www.youtube.com/watch?v=xVcdlANWsl0"className="card"/>
           </div>
           <h2>on the go!!!</h2>
+          <div>
+          <Link to="/landingpage">ENTER</Link>
+          </div>
+          
         </div>
     </Layout>
   );

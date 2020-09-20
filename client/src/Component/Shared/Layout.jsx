@@ -18,7 +18,7 @@ function Layout  (props) {
                 Sets of Flashcards
                 </div>
             </NavLink>
-            <NavLink className="linkb" to="/cudflashcards">
+            <NavLink className="linkb" to="/cudtopics">
                 <div className="link-style">
                 Create New Flashcard Set
                 </div>

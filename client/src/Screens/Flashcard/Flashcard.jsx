@@ -21,6 +21,7 @@ export default function Flashcard({ flashcard }) {
   }, [])
 
   return (
+    <Layout>
     <div
       className={`card ${flip ? 'flip' : ''}`}
       style={{ height: height }}
@@ -36,5 +37,6 @@ export default function Flashcard({ flashcard }) {
       </div>
       <div className="back" ref={backEl}>{flashcard.answer}</div>
     </div>
+    </Layout>
   )
 }
