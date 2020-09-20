@@ -1,5 +1,23 @@
 .layout{
     background-color: darkolivegreen;
+    margin:0 auto;
+    max-width: 1200px;
+
+}
+
+.nav-bar{
+    background-color: darkslategray;
+    margin:0 auto;
+    max-width:1200px; 
+
+
+}
+.link-style{
+    color: dimgrey;
+    font-size: 22px;
+    width: 180px;
+    border-style: solid;
+
 
 
 }
