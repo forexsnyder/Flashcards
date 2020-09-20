@@ -31,7 +31,7 @@ function App() {
         <Route exact path="/landingpage" component={Landingpage} />
         <Route exact path="/topics/:id/flashcards" component={Flashcard} />
         <Route exact path="/cudflashcards" component={CUDFlashcards} />
-        <Route exact path="/cudtopics" component={CUDTopics} />
+        <Route exact path="/cudtopics/" component={CUDTopics} />
         </Switch>
       </div>
   );

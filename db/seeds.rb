@@ -10,6 +10,13 @@ aws = Topic.create!(name: "AWS Solutions Associate")
 cissp = Topic.create!(name: "CISSP")
 security = Topic.create!(name: "Security+")
 
-flashcard1 = Flashcard.create!(front: "What is AWS", back: "A place to earn money.", topic_id: 1)
 
-comment = Comment.create!(comment: "Why is Jeff Bezos so rich", flashcard_id: 1)
+flashcard1 = Flashcard.create!(front: "What is AWS", back: "A place to earn money.", topic_id: 1)
+flashcard2 =Flashcard.create!(front: "What is Azure", back: "A place to earn money.", topic_id: 1)
+Flashcard.create!(front: "What is IBM", back: "A place to earn money.", topic_id: 1)
+Flashcard.create!(front: "What is Ducks", back: "A place to earn money.", topic_id: 2)
+Flashcard.create!(front: "What is Bike", back: "A place to earn money.", topic_id: 2)
+Flashcard.create!(front: "What is cat", back: "A place to earn money.", topic_id: 2)
+Flashcard.create!(front: "What is AWS", back: "A place to earn money.", topic_id: 3)
+
+Comment.create!(comment: "Why is Jeff Bezos so rich", flashcard_id: 1)
