@@ -9,7 +9,7 @@ function CUDFlashcards() {
   return (
       <Layout>
         <div>
-      <he1>get ready to CUD flashcards</he1>
+      <h1>get ready to CUD flashcards</h1>
       
       </div>
       </Layout>

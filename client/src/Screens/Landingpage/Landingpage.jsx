@@ -1,83 +1,48 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams, Link } from "react-router-dom";
 import FlashcardList from '../../Component/FlashcardList';
-// import './App.css'
-import axios from 'axios'
-import Layout from "../../Component/Shared/Layout"
+import axios from 'axios';
+import Layout from "../../Component/Shared/Layout";
+import api from "../../Services/Api-config"
+import Topic from "../../Component/Topic/Topic"
 
-function Landingpage() {
-  const [flashcards, setFlashcards] = useState([])
-  const [categories, setCategories] = useState([])
 
-  const categoryEl = useRef()
-  const amountEl = useRef()
+function Landingpage(){
+  const [topics,updateTopics] = useState([])
+  const params = useParams();
 
-  useEffect(() => {
-    axios
-      .get('https://opentdb.com/api_category.php')
-      .then(res => {
-        setCategories(res.data.trivia_categories)
-      })
-  }, [])
+  useEffect(()=>{
+    const fetchTopic = async ()=> {
+      const resp= await api.get('/topics')
+      updateTopics(resp.data)
+      console.log(resp.data)
 
-  useEffect(() => {
-   
-  }, [])
 
-  function decodeString(str) {
-    const textArea = document.createElement('textarea')
-    textArea.innerHTML= str
-    return textArea.value
-  }
+    }
+    fetchTopic()
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    axios
-    .get('https://opentdb.com/api.php', {
-      params: {
-        amount: amountEl.current.value,
-        category: categoryEl.current.value
-      }
-    })
-    .then(res => {
-      setFlashcards(res.data.results.map((questionItem, index) => {
-        const answer = decodeString(questionItem.correct_answer)
-        const options = [
-          ...questionItem.incorrect_answers.map(a => decodeString(a)),
-          answer
-        ]
-        return {
-          id: `${index}-${Date.now()}`,
-          question: decodeString(questionItem.question),
-          answer: answer,
-          options: options.sort(() => Math.random() - .5)
-        }
-      }))
-    })
-  }
+
+
+  },[])
+
+  const topicsJSX = topics.map((topic, index) =>
+  <Topic id={topic.id} name={topic.name} key={index} />
+  
+  )
+//   const topicsJSX = topics.map((product, index) =>
+//   <Topic _id={product._id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
+// )
+
 
   return (
-    <>
-      <form className="header" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="category">Category</label>
-          <select id="category" ref={categoryEl}>
-            {categories.map(category => {
-              return <option value={category.id} key={category.id}>{category.name}</option>
-            })}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="amount">Number of Questions</label>
-          <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
-        </div>
-        <div className="form-group">
-          <button className="btn">Generate</button>
-        </div>
-      </form>
-      <div className="container">
-        <FlashcardList flashcards={flashcards} />
+    <div>
+      <div className="topics">
+      {topicsJSX}
       </div>
-    </>
+
+    </div>
+
+    
   );
 }
 

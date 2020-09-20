@@ -13,22 +13,22 @@ function App() {
 
   const [subject,updateSubject] = useState()
 
-  useEffect(() => {
-    const topics = async () => {
-      const data = await api.get('/topics')
-      console.log(data.data)
-      updateSubject(data)
-    }
-    topics()
+  // useEffect(() => {
+  //   const topics = async () => {
+  //     const data = await api.get('/topics')
+  //     console.log(data.data)
+  //     updateSubject(data)
+  //   }
+  //   topics()
 
 
-  }, [])  
+  // }, [])  
   return (
       <div className="form-group">
         <Switch>
         <Route exact path="/" component={Welcome} />
         <Route exact path="/landingpage" component={Landingpage} />
-        <Route exact path="/flashcard" component={Flashcard} />
+        <Route exact path="/topics/:id/flashcards" component={Flashcard} />
         <Route exact path="/cudflashcards" component={CUDFlashcards} />
         </Switch>
       </div>
