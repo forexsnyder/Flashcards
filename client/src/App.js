@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Switch, Route } from "react-router-dom"
+
 import './App.css'
 import api from './Services/Api-config'
 import CUDFlashcards from "./Screens/CUDFlashcards/CUDFlashcards"
-import Welcome from "./screens/Welcome/Welcome"
+import Welcome from "./Screens/Welcome/Welcome"
+import Landingpage from "./Screens/Landingpage/Landingpage"
+import Flashcard from "./Screens/Flashcard/Flashcard"
 
 
 function App() {
@@ -22,11 +26,18 @@ function App() {
 
   }, [])  
   return (
-    <>
       <div className="form-group">
+        <Switch>
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/landingpage" component={Landingpage} />
+        <Route exact path="/flashcard" component={Flashcard} />
+        <Route exact path="/cudflashcards" component={CUDFlashcards} />
+
+
+
+        </Switch>
   
       </div>
-    </>
   );
 }
 
