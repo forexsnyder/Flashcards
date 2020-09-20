@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import FlashcardList from './component/FlashcardList';
-import './App.css'
+import FlashcardList from '../../Component/FlashcardList';
+// import './App.css'
 import axios from 'axios'
 
-function App() {
+function Landingpage() {
   const [flashcards, setFlashcards] = useState([])
   const [categories, setCategories] = useState([])
 
@@ -80,4 +80,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landingpage;
