@@ -20,8 +20,8 @@ A responsive website users can login to make full CRUD flashcards, or study some
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end rendering                        |
 |   React Router   | Front-end Routing                          |
-|     Ruby on Rails         | Back-end                          |
-|    Express       | Web app framework                          |
+|   Ruby on Rails  | Back-end                                   |
+|    Monster       | A sugary energy drink for late nights      |
 |    Axios         |   HTTP request                             |
 
 <br>
