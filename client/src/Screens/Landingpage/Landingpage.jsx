@@ -30,9 +30,7 @@ function Landingpage(){
   <Topic id={topic.id} name={topic.name} key={index} />
   
   )
-//   const topicsJSX = topics.map((product, index) =>
-//   <Topic _id={product._id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
-// )
+
 
 
   return (
