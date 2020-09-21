@@ -4,7 +4,6 @@ import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
 import { Link, Redirect } from 'react-router-dom'
 import { createTopic } from "../../Services/topics"
-import api from '../../Services/api-config'
 
 function CUDTopics() {
   const [isCreated, setCreated] = useState(false)
@@ -29,8 +28,6 @@ const handleChange = (event) => {
   if (isCreated) {
       return <Redirect to={`/cudflashcards`} />
   }
-
-
   return (
       <Layout>
             <form className="create-form" onSubmit={handleSubmit}>

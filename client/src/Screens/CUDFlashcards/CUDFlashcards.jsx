@@ -2,9 +2,35 @@ import React from 'react';
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
 import { Link } from 'react-router-dom'
+import { createFlashcards } from "../../Services/flashcards"
+
 
 function CUDFlashcards() {
+  const [isCreated, setCreated] = useState(false)
+  const [flashcard, setFlashcard] = useState({
+    topic_id: null,
+    front: '',
+    back: ''
+})
 
+const handleChange = (event) => {
+  const { name, value } = event.target
+  setFlashcard({
+          ...flashcard,
+          [name]: value
+  })
+}
+
+const handleSubmit = async (event) => {
+  event.preventDefault()
+  const created = await createFlashcards(flashcard)
+  setCreated({ created })
+}
+
+
+if (isCreated) {
+  return <Redirect to={`/cudflashcards`} />
+}
   
   return (
       <Layout>
@@ -27,11 +53,25 @@ function CUDFlashcards() {
      <a>Create a new flashcard</a>
      </div>
     <div>
-      <h1>Front</h1>
-      <input></input>
-      <h1>Back</h1>
-      <textarea className="back-text"></textarea>
-      <input type="submit"></input>
+    <form className="create-form" onSubmit={handleSubmit}>
+                <input
+                    className="input-name"
+                    placeholder='Front'
+                    value={flashcard.front}
+                    name='Front'
+                    onChange={handleChange}
+                />
+                 <textarea
+                    className="textarea-back"
+                    rows={10}
+                    placeholder='Back'
+                    value={flashcard.back}
+                    name='Back'
+                    required
+                    onChange={handleChange}
+                />
+                <button type='submit' className="submit-button">Submit</button>
+            </form>
     </div>
       </Layout>
   );
