@@ -23,6 +23,11 @@ function Layout  (props) {
                 Create New Flashcard Set
                 </div>
             </NavLink>
+            <NavLink className="linkb" to="/comments">
+                <div className="link-style">
+                Comments
+                </div>
+            </NavLink>
             </div>
             <div className="layout-children">{props.children}</div>
         </div>
