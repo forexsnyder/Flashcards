@@ -13,7 +13,7 @@
     align-items: center;
     background-color: darkslategray;
     margin:0 auto;
-    max-width:1200px; 
+    max-width:100%; 
     border: 5px solid red
 
 }
@@ -26,3 +26,18 @@
 
 
 }
+@media only screen and (max-width: 900px) {
+    .layout {
+        border: 15px solid rgb(23, 16, 128)
+    }
+
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .layout {
+        border: 15px solid rgb(163, 154, 20)
+    }
+
+  }
+

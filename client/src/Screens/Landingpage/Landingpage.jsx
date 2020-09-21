@@ -31,14 +31,9 @@ function Landingpage(){
 
   return (
     <Layout>
-    <div>
-      <div className="topics">
+      <div className="main-topics">
       {topicsJSX}
       </div>
-
-    </div>
-
-    
     </Layout>
 
 
