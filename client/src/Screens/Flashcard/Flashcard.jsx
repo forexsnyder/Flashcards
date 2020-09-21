@@ -8,7 +8,7 @@ import Card from '../../Component/Card'
 
 const Flashcard = (props) => {
 
-    const [flashcard, setFlashcard] = useState(null)
+    const [flashcard, setFlashcard] = useState([])
     const [isLoaded, setLoaded] = useState(false)
     const { id } = useParams()
     
@@ -18,19 +18,18 @@ const Flashcard = (props) => {
             const result = await api.get(`/topics/${id}/flashcards`)
             setFlashcard(result.data.data)
              setLoaded(true)
-           
+
         }
         fetchFlashcard()
+
     }, [id])
     console.log(flashcard)
 
-    // const handleDelete = async (event) =>{
-    //     event.preventDefault()
-    //     const del = await deleteFlashcard(flashcard.id)
-        
-
-    // } 
+    const cardJSX = flashcard.map((card, index) =>
+    <Card id={card.id} attributes={card.attributes} key={index} />
     
+    )
+ 
 
 
 
@@ -42,11 +41,11 @@ const Flashcard = (props) => {
     return (
         <Layout>
             <div>
-                <Card flashcards={flashcard}/>
+                {cardJSX}
             </div>
             <div className="button-container">
-            <button className="edit-button"><Link className="edit-link" to={`/flashcards/${flashcard._id}/edit`}>Edit</Link></button>
-            {/* <button className="delete-button" onClick={handleDelete}>Delete</button> */}
+            
+            
             </div>
         </Layout>
     )
