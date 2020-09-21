@@ -2,3 +2,14 @@
     margin:0 auto;
     max-width:1200px;
 }
+
+.welcome-title{
+    margin:0 auto;
+    text-align: center;
+
+}
+
+.flashcard-title{
+    margin: auto;
+    text-align: center;
+}
