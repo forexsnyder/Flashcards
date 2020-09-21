@@ -17,9 +17,6 @@ function Landingpage(){
       console.log(resp.data)
     }
     fetchTopic()
-
-
-
   },[])
 
   const topicsJSX = topics.map((topic, index) =>

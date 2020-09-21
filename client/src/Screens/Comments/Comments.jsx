@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import api from '../../Services/api-config'
 
-import { Link } from 'react-router-dom'
 
 const Comments = () => {
+    const [comments,updateComments] = useState([])
+    const params = useParams();
+  
+    useEffect(()=>{
+      const fetchComment = async ()=> {
+        const resp= await api.get('/comments')
+        updateComments(resp.data)
+        console.log(resp.data)
+      }
+      fetchComment()
+    },[])
     
+
     return (
         <div>
 
