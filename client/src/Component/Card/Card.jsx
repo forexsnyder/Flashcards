@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import {deleteFlashcard} from "../Services/flashcards"
-import api from '../Services/api-config'
-import Comment from './Comment/Comment'
+import {deleteFlashcard} from "../../Services/flashcards"
+import api from '../../Services/api-config'
+import Comment from '../Comment/Comment'
 
 
 const Card = (props) => {
     const [comments, setComments] = useState([])
     const [isLoaded, setLoaded] = useState(false)
 
-console.log(props)
 const {attributes} = props
 const { id } = useParams()
     
@@ -18,16 +17,17 @@ useEffect(() => {
     const fetchComments = async () => {
         const result = await api.get(`/flashcards/${props.id}/comments`)
         setComments(result.data.data)
+        console.log(comments)
          setLoaded(true)
 
     }
     fetchComments()
 
-}, [id])
-console.log(comments)
+}, [])
+
 
 const commentJSX = comments.map((card, index) =>
-<Comment id={card.id} comment={card.comment} key={index} />
+<Comment id={card.id} comment={card.comment} key={index}/>
 
 )
 

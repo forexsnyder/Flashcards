@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Link } from 'react-router-dom'
 
-const Comment = (props) => {
-    console.log(props)
+const Comment = ({id,comment}) => {
+    console.log(id)
     return (
         <div>
-        <h1>{props.id}</h1>
-        <h1>{props.comment}</h1>
+        <h1>{id}</h1>
+        <h1>{comment}</h1>
         </div>
 
     )

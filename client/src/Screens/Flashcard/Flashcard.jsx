@@ -4,7 +4,7 @@ import Layout from '../../Component/Shared/Layout'
 import { getFlashcards, deleteFlashcard } from '../../Services/flashcards'
 import { useParams, Link } from 'react-router-dom'
 import api from '../../Services/api-config'
-import Card from '../../Component/Card'
+import Card from '../../Component/Card/Card'
 
 const Flashcard = (props) => {
 
