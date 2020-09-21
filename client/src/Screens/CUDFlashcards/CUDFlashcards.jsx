@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
-import { Link } from 'react-router-dom'
-import { createFlashcards } from "../../Services/flashcards"
-
+import { Redirect } from 'react-router-dom'
+import { createFlashcard } from "../../Services/flashcards"
+import api from "../../Services/api-config"
 
 function CUDFlashcards() {
+  const [topics,updateTopics] = useState([])
   const [isCreated, setCreated] = useState(false)
   const [flashcard, setFlashcard] = useState({
     topic_id: null,
     front: '',
     back: ''
 })
+
+
+
+
+useEffect(()=>{
+  const fetchTopic = async ()=> {
+    const resp= await api.get('/topics')
+    updateTopics(resp.data)
+    console.log(resp.data)
+  }
+  fetchTopic()
+},[])
+
+
 
 const handleChange = (event) => {
   const { name, value } = event.target
@@ -20,15 +35,24 @@ const handleChange = (event) => {
           [name]: value
   })
 }
+const handleIDChange = (event) => {
+  const { value } = event.target
+  setFlashcard({
+          ...flashcard,
+          topic_id: value
+  })
+}
 
 const handleSubmit = async (event) => {
   event.preventDefault()
-  const created = await createFlashcards(flashcard)
+  const created = await createFlashcard(flashcard)
   setCreated({ created })
 }
 
 
+
 if (isCreated) {
+  
   return <Redirect to={`/cudflashcards`} />
 }
   
@@ -36,29 +60,24 @@ if (isCreated) {
       <Layout>
         <div>
       <h1>get ready to CUD flashcards</h1>
-      
       </div>
-      <div>
-       
-       <label for="cars">Choose a topic:</label>
-          <select id="cars" name="cars" size="3">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-          </select>
-          <input type="submit"></input>
-     </div>
      <div>
      <a>Create a new flashcard</a>
      </div>
     <div>
+
+                <select onChange={handleIDChange} >
+                  {topics.map((topic) =>
+                    <option value={topic.id} >{topic.id}.{topic.name}</option>
+                  )}
+                  </select>
     <form className="create-form" onSubmit={handleSubmit}>
+
                 <input
                     className="input-name"
                     placeholder='Front'
                     value={flashcard.front}
-                    name='Front'
+                    name='front'
                     onChange={handleChange}
                 />
                  <textarea
@@ -66,8 +85,7 @@ if (isCreated) {
                     rows={10}
                     placeholder='Back'
                     value={flashcard.back}
-                    name='Back'
-                    required
+                    name='back'
                     onChange={handleChange}
                 />
                 <button type='submit' className="submit-button">Submit</button>
