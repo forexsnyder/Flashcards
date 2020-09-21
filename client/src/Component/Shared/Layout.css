@@ -1,6 +1,6 @@
 
 * {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Hanalei', cursive;
 
 }
 
@@ -26,12 +26,9 @@
 }
 .link-style{
     color: dimgrey;
-    font-size: 22px;
+    font-size: 1.5rem;
     width: 180px;
-    border-style: solid;
-
-
-
+    /* border-style: solid; */
 }
 @media only screen and (max-width: 900px) {
     .layout {

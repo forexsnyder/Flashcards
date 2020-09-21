@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import api from '../../Services/api-config'
+import Layout from '../../Component/Shared/Layout'
+import Comment from '../../Component/Comment/Comment'
 
 
 const Comments = () => {
     const [comments,updateComments] = useState([])
-    const params = useParams();
+    
   
     useEffect(()=>{
       const fetchComment = async ()=> {
@@ -14,12 +16,17 @@ const Comments = () => {
       }
       fetchComment()
     },[])
-    
+    const commentsJSX = comments.map((comment, index) =>
+    <Comment  comment={comment.comment} key={index} />
+  )
 
     return (
-        <div>
+        <Layout>
+            <div>
+            {commentsJSX}
+            </div>
+        </Layout>
 
-        </div>
 
     )
 }

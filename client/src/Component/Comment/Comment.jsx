@@ -2,11 +2,9 @@ import React from 'react';
 
 import { Link } from 'react-router-dom'
 
-const Comment = ({id,comment}) => {
-    console.log(id)
+const Comment = ({comment}) => {
     return (
         <div>
-        <h1>{id}</h1>
         <h1>{comment}</h1>
         </div>
 
