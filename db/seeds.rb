@@ -19,4 +19,8 @@ Flashcard.create!(front: "What is Bike", back: "A place to earn money.", topic_i
 Flashcard.create!(front: "What is cat", back: "A place to earn money.", topic_id: 2)
 Flashcard.create!(front: "What is AWS", back: "A place to earn money.", topic_id: 3)
 
-Comment.create!(comment: "Why is Jeff Bezos so rich", flashcard_id: 1)
+Comment.create!(comment: "Why is Jeff Bezos so rich")
+Comment.create!(comment: "Why do we need security?")
+Comment.create!(comment: "Why is this website so terrible?")
+Comment.create!(comment: "Am I a joke to you?")
+Comment.create!(comment: "I wonder to is going to get a job first?")

@@ -17,10 +17,8 @@ ActiveRecord::Schema.define(version: 2020_09_19_034347) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
-    t.bigint "flashcard_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["flashcard_id"], name: "index_comments_on_flashcard_id"
   end
 
   create_table "flashcards", force: :cascade do |t|
@@ -45,6 +43,5 @@ ActiveRecord::Schema.define(version: 2020_09_19_034347) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "comments", "flashcards"
   add_foreign_key "flashcards", "topics"
 end
