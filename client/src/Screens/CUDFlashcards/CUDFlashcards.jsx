@@ -1,7 +1,7 @@
 import React from 'react';
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
-
+import { Link } from 'react-router-dom'
 
 function CUDFlashcards() {
 
@@ -30,7 +30,7 @@ function CUDFlashcards() {
       <h1>Front</h1>
       <input></input>
       <h1>Back</h1>
-      <input></input>
+      <textarea className="back-text"></textarea>
       <input type="submit"></input>
     </div>
       </Layout>

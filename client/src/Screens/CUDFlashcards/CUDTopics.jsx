@@ -1,70 +1,46 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react'
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
-
-
+import { Link } from 'react-router-dom'
+import { createTopic } from "../../Services/topics"
 
 function CUDTopics() {
+  const [topic, setTopic] = useState({
+    name: '',
+})
 
+const [isCreated, setCreated] = useState(false)
 
-  
+const handleChange = (event) => {
+const { name, value } = event.target
+setTopic({
+        ...topic,
+        [name]: value
+})
+}
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const create = await createTopic(topic)
+
+}
+
   return (
       <Layout>
-        <div>
-      <h1>get ready to CUD Topics</h1>
-      <div>
-        <a>Create a new Topic.</a>
-        <input></input>
-        <input type="submit"></input>
-      </div>
-      <div>
-        <h1>Or....</h1>
-      </div>
-     <div>
-       <a>Update a topic</a>
-       <label for="cars">Choose a car:</label>
-          <select id="cars" name="cars" size="3">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-          </select>
-          <input type="submit"></input>
-     </div>
-      
-      {/* <form className="edit-form" onSubmit={handleSubmit}>
-                    <input
-                        className="input-name"
-                        placeholder='Name'
-                        value={product.name}
-                        name='name'
-                        required
-                        autoFocus
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="input-price"
-                        placeholder='Price'
-                        value={product.price}
-                        name='price'
-                        required
-                        onChange={handleChange}
-                    />
-                    <textarea
-                        className="textarea-description"
-                        rows={10}
-                        cols={78}
-                        placeholder='Description'
-                        value={product.description}
-                        name='description'
-                        required
-                        onChange={handleChange}
-                    />
-                    <button type='submit' className="save-button">Save</button>
-                </form> */}
-            
-      
-      </div>
+            <form className="create-form" onSubmit={handleSubmit}>
+                <input
+                    className="input-name"
+                    placeholder='Name'
+                    value={topic.name}
+                    name='name'
+                    required
+                    autoFocus
+                    onChange={handleChange}
+                />
+                <button type='submit' className="submit-button">Submit</button>
+            </form>
+     <Link to="/cudflashcards">Create Flashcards</Link>
       </Layout>
   );
 }
