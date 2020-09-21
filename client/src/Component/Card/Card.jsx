@@ -6,34 +6,11 @@ import Comment from '../Comment/Comment'
 
 
 const Card = (props) => {
-    const [comments, setComments] = useState([])
-    const [isLoaded, setLoaded] = useState(false)
-
+    
 const {attributes} = props
-const { id } = useParams()
+
     
 
-useEffect(() => {
-    const fetchComments = async () => {
-        const result = await api.get(`/flashcards/${props.id}/comments`)
-        setComments(result.data.data)
-        console.log(comments)
-         setLoaded(true)
-
-    }
-    fetchComments()
-
-}, [])
-
-
-const commentJSX = comments.map((card, index) =>
-<Comment id={card.id} comment={card.comment} key={index}/>
-
-)
-
-if (!isLoaded) {
-    return <h1>Loading...</h1>
-}
 
     return (
         <div>
@@ -42,9 +19,7 @@ if (!isLoaded) {
             <h1>{attributes.back}</h1>
             <button className="edit-button"><Link className="edit-link" to={`/flashcards/${props.id}`}>Edit</Link></button>
             <button className="delete-button" onClick={() => deleteFlashcard(props.id)}>Delete</button>
-            <div>
-                {commentJSX}
-            </div>
+
         </div>
 
     )
