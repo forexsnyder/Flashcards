@@ -2,7 +2,7 @@ import api from './api-config'
 
 export const getFlashcards = async () => {
   try {
-      const response = await api.get(`/topics/${id}/flashcards`)
+      const response = await api.get('/flashcards')
       return response.data
   } catch (error) {
       throw error

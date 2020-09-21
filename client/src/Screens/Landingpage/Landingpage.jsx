@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from "react-router-dom";
-import FlashcardList from '../../Component/FlashcardList';
 import Layout from "../../Component/Shared/Layout";
 import api from "../../Services/api-config"
 import Topic from "../../Component/Topic/Topic"
