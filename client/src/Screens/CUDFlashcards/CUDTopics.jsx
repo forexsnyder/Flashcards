@@ -10,8 +10,6 @@ function CUDTopics() {
     name: '',
 })
 
-const [isCreated, setCreated] = useState(false)
-
 const handleChange = (event) => {
 const { name, value } = event.target
 setTopic({
