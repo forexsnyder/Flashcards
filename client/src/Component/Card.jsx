@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import {deleteFlashcard} from "../Services/flashcards"
 import api from '../Services/api-config'
+import Comment from './Comment/Comment'
 
 
 const Card = (props) => {
@@ -24,10 +25,11 @@ useEffect(() => {
 
 }, [id])
 console.log(comments)
-// const commentJSX = comments.map((card, index) =>
-// <Card id={card.id} attributes={card.attributes} key={index} />
 
-// )
+const commentJSX = comments.map((card, index) =>
+<Comment id={card.id} comment={card.comment} key={index} />
+
+)
 
 if (!isLoaded) {
     return <h1>Loading...</h1>
@@ -40,9 +42,9 @@ if (!isLoaded) {
             <h1>{attributes.back}</h1>
             <button className="edit-button"><Link className="edit-link" to={`/flashcards/${props.id}`}>Edit</Link></button>
             <button className="delete-button" onClick={() => deleteFlashcard(props.id)}>Delete</button>
-            {/* <div>
+            <div>
                 {commentJSX}
-            </div> */}
+            </div>
         </div>
 
     )
