@@ -20,6 +20,7 @@ const handleChange = (event) => {
 }
 
   const handleSubmit = async (event) => {
+    console.log(topic)
     event.preventDefault()
     const created = await createTopic(topic)
     setCreated({ created })
