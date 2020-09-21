@@ -15,8 +15,6 @@ function CUDFlashcards() {
 })
 
 
-
-
 useEffect(()=>{
   const fetchTopic = async ()=> {
     const resp= await api.get('/topics')
@@ -66,9 +64,9 @@ if (isCreated) {
      </div>
     <div>
 
-                <select onChange={handleIDChange} >
-                  {topics.map((topic) =>
-                    <option value={topic.id} >{topic.id}.{topic.name}</option>
+    <select onChange={handleIDChange} >
+      {topics.map((topic) =>
+        <option value={topic.id} >{topic.id}.{topic.name}</option>
                   )}
                   </select>
     <form className="create-form" onSubmit={handleSubmit}>

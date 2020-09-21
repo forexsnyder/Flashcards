@@ -8,6 +8,7 @@ import Welcome from "./Screens/Welcome/Welcome"
 import Landingpage from "./Screens/Landingpage/Landingpage"
 import Flashcard from "./Screens/Flashcard/Flashcard"
 import CUDTopics from "./Screens/CUDFlashcards/CUDTopics"
+import UpdateFlashcard from './Screens/Flashcard/UpdateFlashcard';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/topics/:id/flashcards" component={Flashcard} />
         <Route exact path="/cudflashcards" component={CUDFlashcards} />
         <Route exact path="/cudtopics/" component={CUDTopics} />
+        <Route exact path="/flashcards/:id" component={UpdateFlashcard} />
         </Switch>
       </div>
   );
