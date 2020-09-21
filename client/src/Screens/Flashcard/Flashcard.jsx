@@ -30,10 +30,6 @@ const Flashcard = (props) => {
     
     )
  
-
-
-
-
     if (!isLoaded) {
         return <h1>Loading...</h1>
     }
