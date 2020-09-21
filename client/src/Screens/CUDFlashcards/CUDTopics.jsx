@@ -20,7 +20,7 @@ setTopic({
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const create = await createTopic(topic)
+    const response = await api.post('/topics', topic)
 
 }
 
