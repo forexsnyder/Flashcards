@@ -2,27 +2,34 @@
 import React, { useState, useEffect } from 'react'
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { createTopic } from "../../Services/topics"
+import api from '../../Services/api-config'
 
 function CUDTopics() {
+  const [isCreated, setCreated] = useState(false)
   const [topic, setTopic] = useState({
     name: '',
 })
 
 const handleChange = (event) => {
-const { name, value } = event.target
-setTopic({
-        ...topic,
-        [name]: value
-})
+  const { name, value } = event.target
+  setTopic({
+          ...topic,
+          [name]: value
+  })
 }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const response = await api.post('/topics', topic)
+    const created = await createTopic(topic)
+    setCreated({ created })
+  }
 
-}
+  if (isCreated) {
+      return <Redirect to={`/cudflashcards`} />
+  }
+
 
   return (
       <Layout>
@@ -32,8 +39,6 @@ setTopic({
                     placeholder='Name'
                     value={topic.name}
                     name='name'
-                    required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <button type='submit' className="submit-button">Submit</button>
