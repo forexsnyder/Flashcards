@@ -1,63 +1,28 @@
-# PROJECT 4 README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
 
-- [Overview](#overview)
-- [MVP](#mvp)
-  - [Goals](#goals)
-  - [Libraries and Dependencies](#libraries-and-dependencies)
-  - [Client (Front End)](#client-front-end)
-    - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
-    - [Component Hierarchy](#component-hierarchy)
-    - [Component Breakdown](#component-breakdown)
-    - [Time Estimates](#time-estimates)
-  - [Server (Back End)](#server-back-end)
-    - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
-- [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
 
-<br>
-
-## Overview
-
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+**FlashCards** 
 
 
 <br>
 
 ## MVP
+A responsive website users can login to make full CRUD flashcards, or study someone else's set.  Users can also add-to an exisiting set . Ask questions/answer community questions about specific a flash card. They will also be able to manage their profile.
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
-
-### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
 
 <br>
+
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front-end rendering                        |
+|   React Router   | Front-end Routing                          |
+|   Ruby on Rails  | Back-end                                   |
+|    Monster       | A sugary energy drink for late nights      |
+|    Axios         |   HTTP request                             |
 
 <br>
 
@@ -65,35 +30,16 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+[Desktop](https://drive.google.com/file/d/1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7/view?usp=sharing)
 
-- Desktop Landing
+[Tablet](https://drive.google.com/file/d/1W0B0kyeAQMO92XYCFKPe7PqPgv-K7uc7/view?usp=sharing7)
 
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+[Mobile](https://drive.google.com/file/d/1V1owPx8bv7luYMoA78fyqkS8kLcq60id/view?usp=sharing)
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+![ComponentTree](https://github.com/forexsnyder/Flashcards/blob/develop/ParentChild.JPG)
 
 #### Component Hierarchy
 
@@ -103,39 +49,51 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 src
 |__ assets/
-      |__ fonts
       |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
+|__ screens/
       |__ Header.jsx
+      |__ Welcome.jsx
+      |__ Flashcard.jsx
+      |__ Signup.jsx
+      |__ LandingPage.jsx
+      |__ MemoryGame.jsx
 |__ services/
+      |__ Comments.jsx
+      |__ Sort.jsx
+      |__ Comments.jsx
+      |__ RecentComments.jsx
 
 ```
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|  Component     |    Type    | state | props | Description                                                      |
+| :----------:   | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header      | functional |   n   |   n   | Title and Navigation                                             |
+|    Signup      | functional |   n   |   n   | Change form state                                             |
+|    Landingpage      | functional |   n   |   y   | Title and Navigation                                             |
+| Flashcard Set  | functional |   n   |   y   | Searchable list of Flashcard Topics, Create New Set                              |
+| Flashcard      | functional |   n   |   y   | Create, Read, Update, Delete Flashcard                           |
+| Edit Profile   | functional |   n   |   y   | Change email, password, username                                 |
 
 #### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------    | :------: | :------------: | :-----------: | :---------: |
+| Welcome  Page          |    H     |     3 hrs      |               |     TBD     |
+| Create CRUD Flashcards |    H     |     3 hrs      |               |     TBD     |
+| Signup              |    H     |     2 hrs      |               |     TBD     |
+| LandingPage         |    H     |     5 hrs      |               |     TBD     |
+| Backend             |    H     |     3 hrs      |               |     TBD     |
+| Flashcards          |    H     |     6 hrs      |               |     TBD     |
+| Edit Profile        |    H     |     3 hrs      |               |     TBD     |
+| Comments Section    |    H     |     3 hrs      |               |     TBD     |
+| Styling             |    H     |     20 hrs     |               |     TBD     |
+| TOTAL               |          |     48 hrs     |               |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -143,7 +101,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+[ERB Model](https://drive.google.com/file/d/10o1sAj9puS-KupTZqOCnMzmNmlhwHoq7/view?usp=sharing)
 
 <br>
 
@@ -151,7 +109,8 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Memory Game with a highscore.  Using the linked list system a player chooses how many objects they want to memorize.  Then write down the items in order.  Score the list,
+and the player will see their high score.
 
 ***
 
