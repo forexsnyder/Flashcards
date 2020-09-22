@@ -1,5 +1,6 @@
-class TopicsController < ApplicationController
+class TopicsController < JSONAPI::ResourceController
   before_action :set_topic, only: [:show, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /topics
   def index

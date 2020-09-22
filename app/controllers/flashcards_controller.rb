@@ -1,5 +1,6 @@
-class FlashcardsController < ApplicationController
+class FlashcardsController < JSONAPI::ResourceController
   before_action :set_flashcard, only: [:show, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /flashcards
   def index
