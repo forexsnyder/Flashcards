@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+Topic.destroy_all
+Flashcard.destroy_all
+Comment.destroy_all
 aws = Topic.create!(name: "AWS Solutions Associate")
 cissp = Topic.create!(name: "CISSP")
 security = Topic.create!(name: "Security+")
