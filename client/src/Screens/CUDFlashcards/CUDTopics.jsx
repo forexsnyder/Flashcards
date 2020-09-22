@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './CUDFlashcards.css'
 import Layout from "../../Component/Shared/Layout"
 import { Link, Redirect } from 'react-router-dom'

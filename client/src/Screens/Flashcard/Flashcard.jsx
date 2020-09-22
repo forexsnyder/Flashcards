@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Flashcard.css'
 import Layout from '../../Component/Shared/Layout'
-import { getFlashcards, deleteFlashcard } from '../../Services/flashcards'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import api from '../../Services/api-config'
 import Card from '../../Component/Card/Card'
 

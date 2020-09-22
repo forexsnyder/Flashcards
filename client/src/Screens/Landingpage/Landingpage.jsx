@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import Layout from "../../Component/Shared/Layout";
 import api from "../../Services/api-config"
 import Topic from "../../Component/Topic/Topic"

@@ -1,4 +1,4 @@
-class HighscoresController < ApplicationController
+class HighscoresController < JSONAPI::ResourceController
   before_action :set_highscore, only: [:show, :update, :destroy]
 
   # GET /highscores

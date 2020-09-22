@@ -1,5 +1,6 @@
-class CommentsController < ApplicationController
+class CommentsController < JSONAPI::ResourceController
   before_action :set_comment, only: [:show, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /comments
   def index

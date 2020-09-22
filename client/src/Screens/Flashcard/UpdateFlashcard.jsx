@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import {updateFlashcard, getFlashcard} from '../../Services/flashcards'
 import Layout from "../../Component/Shared/Layout"
-import api from "../../Services/api-config"
+
 
 const UpdateFlashcard = (props) => {
     const [isUpdated, setUpdated] = useState(false)
