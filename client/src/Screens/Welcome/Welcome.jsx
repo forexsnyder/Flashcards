@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Layout from "../../Component/Shared/Layout"
 import './Welcome.css'
-import api from '../../Services/api-config'
 import cards from '../../Resources/flashcards.jpg'
 import { Link } from 'react-router-dom'
 function Welcome() {

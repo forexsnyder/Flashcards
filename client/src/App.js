@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from "react-router-dom"
 
 import './App.css'
-import api from './Services/api-config'
+
 import CUDFlashcards from "./Screens/CUDFlashcards/CUDFlashcards"
 import Welcome from "./Screens/Welcome/Welcome"
 import Landingpage from "./Screens/Landingpage/Landingpage"
