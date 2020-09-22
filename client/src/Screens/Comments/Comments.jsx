@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../../Services/api-config'
 import Layout from '../../Component/Shared/Layout'
 import Comment from '../../Component/Comment/Comment'

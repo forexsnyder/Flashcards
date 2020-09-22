@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {deleteFlashcard} from "../../Services/flashcards"
-import api from '../../Services/api-config'
-import Comment from '../Comment/Comment'
+
 
 
 const Card = (props) => {
